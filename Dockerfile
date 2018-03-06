@@ -1,10 +1,4 @@
-FROM busybox
-MAINTAINER Chris <c@crccheck.com>
+FROM nginx
+MAINTAINER swapnil <swapnil.palash@codenation.co.in>
 
-ADD index.html /www/index.html
-
-EXPOSE 8000
-
-# Create a basic webserver and sleep forever
-CMD httpd -p 8000 -h /www; tail -f /dev/null
-
+ADD index.html /usr/share/nginx/html/
