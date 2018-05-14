@@ -1,10 +1,9 @@
-FROM busybox
-MAINTAINER Chris <c@crccheck.com>
+FROM circleci/node:stretch-browsers
 
-ADD index.html /www/index.html
+LABEL com.trilogy.maintainer="alexander.yushchenko@aurea.com"
 
-EXPOSE 8000
+# Default port to be exposed.
+EXPOSE 4000
+EXPOSE 8080
 
-# Create a basic webserver and sleep forever
-CMD httpd -p 8000 -h /www; tail -f /dev/null
-
+CMD tail -f /dev/null
