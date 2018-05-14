@@ -6,4 +6,3 @@ LABEL com.trilogy.maintainer="alexander.yushchenko@aurea.com"
 EXPOSE 4000
 EXPOSE 8080
 
-CMD tail -f /dev/null
